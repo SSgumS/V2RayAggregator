@@ -120,13 +120,8 @@ class sub_convert():
                     print('Sub_content 格式错误')
                     return '订阅内容解析错误'
 
-            elif 'proxies:' in sub_content:  # 对 Clash 内容进行格式化处理
+            else:  # 对 Clash 内容进行格式化处理
                 try:
-                    # fix clash servers from https://github.com/kxswa/k
-                    if '!<str> ' in sub_content:
-                        sub_content = sub_content.replace(
-                            '!<str> ', '').replace('!<str>', '')
-
                     try_load = yaml.safe_load(sub_content)
                     if output:
                         raise ValueError
@@ -135,66 +130,12 @@ class sub_convert():
                         return content_yaml_dic  # 返回字典, output 值为 True 时返回修饰过的 YAML 文本
                 except Exception:
                     try:
-                        sub_content = sub_content.replace(
-                            '\'', '').replace('"', '')
-                        url_list = []
-                        il_chars = ['|', '?', '[', ']', '@', '!', '%', ':']
-                        lines = re.split(r'\n+', sub_content)
-                        line_fix_list = []
-                        for line in lines:
-                            value_list = re.split(r': |, ', line)
-                            if len(value_list) > 6:
-                                value_list_fix = []
-                                for value in value_list:
-                                    for char in il_chars:
-                                        value_il = False
-                                        if char in value:
-                                            value_il = True
-                                            break
-                                    if value_il == True and ('{' not in value and '}' not in value):
-                                        value = '"' + value + '"'
-                                        value_list_fix.append(value)
-                                    elif value_il == True and '}' in value:
-                                        if '}}}' in value:
-                                            host_part = value.replace(
-                                                '}}}', '')
-                                            host_value = '"'+host_part+'"}}}'
-                                            value_list_fix.append(host_value)
-                                        elif '}}' not in value:
-                                            host_part = value.replace('}', '')
-                                            host_value = '"'+host_part+'"}'
-                                            value_list_fix.append(host_value)
-                                    else:
-                                        value_list_fix.append(value)
-                                    line_fix = line
-                                for index in range(len(value_list_fix)):
-                                    line_fix = line_fix.replace(
-                                        value_list[index], value_list_fix[index])
-                                line_fix_list.append(line_fix)
-                            elif len(value_list) == 2:
-                                value_list_fix = []
-                                for value in value_list:
-                                    for char in il_chars:
-                                        value_il = False
-                                        if char in value:
-                                            value_il = True
-                                            break
-                                    if value_il == True:
-                                        value = '"' + value + '"'
-                                    value_list_fix.append(value)
-                                line_fix = line
-                                for index in range(len(value_list_fix)):
-                                    line_fix = line_fix.replace(
-                                        value_list[index], value_list_fix[index])
-                                line_fix_list.append(line_fix)
-                            elif len(value_list) == 1:
-                                if ':' in line:
-                                    line_fix_list.append(line)
-                            else:
-                                line_fix_list.append(line)
+                        # prevent number passwords to be compatable with Clash
+                        password_pattern = r'(password:\s*)([^\'"][^,}]*)'
+                        def replace_passwords(match):
+                            return match.group(1) + "'" + match.group(2).replace("'", r"\'") + "'"
+                        sub_content = re.sub(password_pattern, replace_passwords, sub_content)
 
-                        sub_content = '\n'.join(line_fix_list).replace(
-                            'False', 'false').replace('True', 'true')
                         if output:
                             return sub_content
                         else:
@@ -203,9 +144,6 @@ class sub_convert():
                     except:
                         print('Sub_content 格式错误')
                         return '订阅内容解析错误'
-            else:
-                print('订阅内容解析错误')
-                return '订阅内容解析错误'
         else:
             print('订阅内容解析错误')
             return '订阅内容解析错误'
@@ -274,7 +212,7 @@ class sub_convert():
 
             print("\nNow is " + str(proxies_list.__len__()) + "\n")
 
-        url_list = []
+        yaml_str = "proxies:\n"
 
         for proxy in proxies_list:  # 改名
             if format_name_enabled:
@@ -381,24 +319,18 @@ class sub_convert():
                     proxy['name'] = f'{name_emoji}{country_code}-{ip}-{proxy_index:0>3d}'
                 elif len(proxies_list) <= 99:
                     proxy['name'] = f'{name_emoji}{country_code}-{ip}-{proxy_index:0>2d}'
+            
+            if proxy['server'] != '127.0.0.1':
+                # yaml.dump 显示中文方法 https://blog.csdn.net/weixin_41548578/article/details/90651464
+                # yaml.dump 各种参数 https://blog.csdn.net/swinfans/article/details/88770119
+                proxy_str = yaml.dump(proxy, default_flow_style=True,
+                          sort_keys=False, allow_unicode=True, width=750, indent=2)
+                yaml_str += '- ' + proxy_str
+        
+        yaml_str = sub_convert.format(yaml_str, output=True)
 
-                if proxy['server'] != '127.0.0.1':
-                    proxy_str = str(proxy)
-                    url_list.append(proxy_str)
-            elif format_name_enabled == False:
-                if proxy['server'] != '127.0.0.1':  # 防止加入无用节点
-                    proxy_str = str(proxy)
-                    url_list.append(proxy_str)
+        return yaml_str  # 输出 YAML 格式文本
 
-        yaml_content_dic = {'proxies': url_list}
-        # yaml.dump 显示中文方法 https://blog.csdn.net/weixin_41548578/article/details/90651464 yaml.dump 各种参数 https://blog.csdn.net/swinfans/article/details/88770119
-        yaml_content_raw = yaml.dump(yaml_content_dic, default_flow_style=False,
-                                     sort_keys=False, allow_unicode=True, width=750, indent=2)
-        yaml_content = sub_convert.format(yaml_content_raw, output=True)
-
-        return yaml_content  # 输出 YAML 格式文本
-
-    # 将 URL 内容转换为 YAML 文本, output 为 False 时输出节点配置字典
     # 将 URL 内容转换为 YAML 文本, output 为 False 时输出节点配置字典
     # to yaml
     def yaml_encode(url_content, output=True):
