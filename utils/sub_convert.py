@@ -13,7 +13,7 @@ import geoip2.database
 
 
 class sub_convert:
-    password_pattern = re.compile(r'(password:\s*)([^\'"][^,}]*)')
+    password_pattern = re.compile(r'(password:\s*)([^\'"][^,}\r\n]*)')
 
     @staticmethod
     def replace_passwords(match: re.Match):

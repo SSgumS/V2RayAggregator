@@ -15,7 +15,7 @@ class NoAliasDumper(yaml.SafeDumper):
 
 
 class subs_function:
-    password_pattern = re.compile(r'(password:\s*)([^\'"][^,}]*)')
+    password_pattern = re.compile(r'(password:\s*)([^\'"][^,}\r\n]*)')
 
     @staticmethod
     def replace_passwords(match: re.Match):
