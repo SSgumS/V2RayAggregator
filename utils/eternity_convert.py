@@ -74,32 +74,48 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     ############################################################################
 
     # remove lines with name issue
-    removed_bad_char = list(
-        filter(
-            lambda x: str(x).__contains__("�") == False, all_provider.split("\n")[1:]
-        )
+    bad_char = "�"
+    proxies_without_bad_char = list(
+        filter(lambda x: bad_char not in str(x), all_provider.split("\n")[1:])
     )
     log_lines_without_bad_char = list(
-        filter(lambda x: str(x).__contains__("�") == False, log_lines)
+        filter(lambda x: bad_char not in str(x), log_lines)
+    )
+    # remove lines with zero speed
+    healthy_servers = list(
+        filter(lambda x: "avg_speed: 0.0 MB" not in str(x), log_lines)
     )
 
     # make sure the size of two list are equal
     print(
-        f"removed_bad_char count => {removed_bad_char.__len__()} & log_lines_without_bad_char count => {log_lines_without_bad_char.__len__()}"
+        f"""proxies_without_bad_char count => {len(proxies_without_bad_char)} & 
+        log_lines_without_bad_char count => {len(log_lines_without_bad_char)} & 
+        healthy_servers count => {len(healthy_servers)}"""
     )
 
-    # take a part from begining of all lines
-    num = 100
-    num = removed_bad_char.__len__() if removed_bad_char.__len__() <= num else num
-
     # remove zero speed lines
-    removed_bad_char_without_zero = []
-    for index, item in enumerate(removed_bad_char[0 : num + 1]):
-        if log_lines_without_bad_char[index].__contains__("avg_speed: 0.0 MB") == False:
-            removed_bad_char_without_zero.append(item)
+    filtered_proxies = []
+    for index, item in enumerate(proxies_without_bad_char):
+        if "avg_speed: 0.0 MB" not in log_lines_without_bad_char[index]:
+            filtered_proxies.append(item)
+
+    # take a part
+    max_num = 100
+    min_num = 50
+    if len(filtered_proxies) > max_num:
+        filtered_proxies = filtered_proxies[:max_num]
+    elif len(filtered_proxies) < min_num:
+        remaining_num = min_num - len(filtered_proxies)
+        added_count = 0
+        for index, item in enumerate(proxies_without_bad_char):
+            if added_count == remaining_num:
+                break
+            if "avg_speed: 0.0 MB" in log_lines_without_bad_char[index]:
+                filtered_proxies.append(item)
+                added_count += 1
 
     # convert the safe partition to yaml format
-    all_provider = "proxies:\n" + "\n".join(removed_bad_char_without_zero)
+    all_provider = "proxies:\n" + "\n".join(filtered_proxies)
     all_provider = subs_function.fix_yaml_password_formatting(all_provider)
 
     lines = re.split(r"\n+", all_provider)
