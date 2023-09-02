@@ -1,10 +1,10 @@
 #准备好所需文件
 wget -O clash.gz https://github.com/Dreamacro/clash/releases/download/v1.11.8/clash-linux-amd64-v1.11.8.gz
 gunzip clash.gz
-wget -O lite-linux-amd64 https://github.com/mahdibland/SSAggregator/releases/download/1.0.0/lite-linux-amd64
-wget -O clash_config.yml https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/utils/speedtest/clash_config.yml
-wget -O proxychains.conf https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/utils/speedtest/proxychains.conf
-wget -O lite_config.json https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/utils/speedtest/lite_config.json
+wget -O lite-linux-amd64 https://github.com/SSgumS/V2RayAggregator/releases/download/1.0.0/lite-linux-amd64
+wget -O clash_config.yml https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/utils/speedtest/clash_config.yml
+wget -O proxychains.conf https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/utils/speedtest/proxychains.conf
+wget -O lite_config.json https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/utils/speedtest/lite_config.json
 #初始化 Clash
 chmod +x ./clash && ./clash &
 #安装并配置 proxychains
