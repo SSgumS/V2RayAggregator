@@ -52,16 +52,19 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     indexx = 0
     for line in temp_providers:
         if line != "proxies:":
-            #####
-            server_name = substrings(line, "name:", ",")
-            server_type = substrings(line, "type:", ",")
-            log_lines[indexx] = "name: %s | type: %s | %s" % (
-                server_name,
-                server_type,
-                log_lines[indexx],
-            )
-            #####
-            indexx += 1
+            try:
+                #####
+                server_name = substrings(line, "name:", ",")
+                server_type = substrings(line, "type:", ",")
+                log_lines[indexx] = "name: %s | type: %s | %s" % (
+                    server_name,
+                    server_type,
+                    log_lines[indexx],
+                )
+                #####
+                indexx += 1
+            except:
+                print("log lines length != providers length")
 
     log_writer = open(log_file, "w")
     log_writer.writelines(log_lines)
@@ -84,7 +87,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     )
 
     # take a part from begining of all lines
-    num = 200
+    num = 100
     num = removed_bad_char.__len__() if removed_bad_char.__len__() <= num else num
 
     # remove zero speed lines
@@ -95,6 +98,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
 
     # convert the safe partition to yaml format
     all_provider = "proxies:\n" + "\n".join(removed_bad_char_without_zero)
+    all_provider = subs_function.fix_yaml_password_formatting(all_provider)
 
     lines = re.split(r"\n+", all_provider)
 

@@ -37,6 +37,13 @@ class subs_function:
         )
         return yaml_str
 
+    @staticmethod
+    def fix_yaml_password_formatting(yaml_str):
+        yaml_str = re.sub(
+            subs_function.password_pattern, subs_function.replace_passwords, yaml_str
+        )
+        return yaml_str
+
     def convert_sub(
         url: str,
         output: str,

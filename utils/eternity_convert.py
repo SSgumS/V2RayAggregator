@@ -89,11 +89,18 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
     )
 
     # take a part from begining of all lines
-    num = 200
+    num = 100
     num = removed_bad_char.__len__() if removed_bad_char.__len__() <= num else num
 
+    # remove zero speed lines
+    removed_bad_char_without_zero = []
+    for index, item in enumerate(removed_bad_char[0 : num + 1]):
+        if log_lines_without_bad_char[index].__contains__("avg_speed: 0.0 MB") == False:
+            removed_bad_char_without_zero.append(item)
+
     # convert the safe partition to yaml format
-    all_provider = "proxies:\n" + "\n".join(removed_bad_char[0 : num + 1])
+    all_provider = "proxies:\n" + "\n".join(removed_bad_char_without_zero)
+    all_provider = subs_function.fix_yaml_password_formatting(all_provider)
 
     lines = re.split(r"\n+", all_provider)
 
