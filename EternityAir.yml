@@ -17,7 +17,7 @@ dns:
   - https://dns.google/dns-query
   - tls://dns.google:853
 proxies:
-- name: RELAY-172.67.180.138-00 | 8.107MB
+- name: RELAY-104.21.59.157-03 | 8.146MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -26,13 +26,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.67.180.138-00 | 8.107MB
+  servername: RELAY-104.21.59.157-03 | 8.146MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: Amsterdam.bobbykotick.rip
-- name: RELAY-104.21.59.157-03 | 7.946MB
+- name: RELAY-172.67.180.138-00 | 8.041MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -41,13 +41,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.59.157-03 | 7.946MB
+  servername: RELAY-172.67.180.138-00 | 8.041MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: Kansas.bobbykotick.rip
-- name: RELAY-104.21.59.157-01 | 6.543MB
+- name: RELAY-104.21.59.157-02 | 7.438MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -56,13 +56,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.59.157-01 | 6.543MB
+  servername: RELAY-104.21.59.157-02 | 7.438MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: Dusseldorf.bobbykotick.rip
-- name: RELAY-172.67.180.138-02 | 0.671MB
+- name: RELAY-172.67.180.138-01 | 1.309MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -71,7 +71,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.67.180.138-02 | 0.671MB
+  servername: RELAY-172.67.180.138-01 | 1.309MB
   network: ws
   ws-opts:
     path: /
@@ -133,27 +133,27 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-172.67.180.138-00 | 8.107MB
+  - RELAY-104.21.59.157-03 | 8.146MB
 - name: Tier 2 ⚡️
   type: url-test
   url: http://clients3.google.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-104.21.59.157-03 | 7.946MB
+  - RELAY-172.67.180.138-00 | 8.041MB
 - name: Tier 3 💎
   type: url-test
   url: http://clients3.google.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-104.21.59.157-01 | 6.543MB
+  - RELAY-104.21.59.157-02 | 7.438MB
 - name: Tier 4 🗿
   type: url-test
   url: http://clients3.google.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-172.67.180.138-02 | 0.671MB
+  - RELAY-172.67.180.138-01 | 1.309MB
 rules:
 - MATCH,Global ©️
