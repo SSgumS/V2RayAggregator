@@ -17,7 +17,7 @@ dns:
   - https://dns.google/dns-query
   - tls://dns.google:853
 proxies:
-- name: RELAY-104.21.59.157-02 | 8.054MB
+- name: RELAY-172.67.180.138-00 | 8.107MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -26,28 +26,13 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.59.157-02 | 8.054MB
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: Kansas.bobbykotick.rip
-- name: RELAY-172.67.180.138-03 | 8.011MB
-  server: bobbykotick.rip
-  port: 443
-  type: vmess
-  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: false
-  servername: RELAY-172.67.180.138-03 | 8.011MB
+  servername: RELAY-172.67.180.138-00 | 8.107MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: Amsterdam.bobbykotick.rip
-- name: RELAY-104.21.59.157-01 | 5.471MB
+- name: RELAY-104.21.59.157-03 | 7.946MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -56,13 +41,28 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.59.157-01 | 5.471MB
+  servername: RELAY-104.21.59.157-03 | 7.946MB
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: Kansas.bobbykotick.rip
+- name: RELAY-104.21.59.157-01 | 6.543MB
+  server: bobbykotick.rip
+  port: 443
+  type: vmess
+  uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: false
+  servername: RELAY-104.21.59.157-01 | 6.543MB
   network: ws
   ws-opts:
     path: /
     headers:
       Host: Dusseldorf.bobbykotick.rip
-- name: RELAY-104.21.59.157-00 | 4.001MB
+- name: RELAY-172.67.180.138-02 | 0.671MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -71,7 +71,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-104.21.59.157-00 | 4.001MB
+  servername: RELAY-172.67.180.138-02 | 0.671MB
   network: ws
   ws-opts:
     path: /
@@ -133,27 +133,27 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-104.21.59.157-02 | 8.054MB
+  - RELAY-172.67.180.138-00 | 8.107MB
 - name: Tier 2 ⚡️
   type: url-test
   url: http://clients3.google.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-172.67.180.138-03 | 8.011MB
+  - RELAY-104.21.59.157-03 | 7.946MB
 - name: Tier 3 💎
   type: url-test
   url: http://clients3.google.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-104.21.59.157-01 | 5.471MB
+  - RELAY-104.21.59.157-01 | 6.543MB
 - name: Tier 4 🗿
   type: url-test
   url: http://clients3.google.com/generate_204
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-104.21.59.157-00 | 4.001MB
+  - RELAY-172.67.180.138-02 | 0.671MB
 rules:
 - MATCH,Global ©️
