@@ -17,7 +17,7 @@ dns:
   - https://dns.google/dns-query
   - tls://dns.google:853
 proxies:
-- name: RELAY-172.67.180.138-00 | 0.0MB
+- name: RELAY-104.21.59.157-00 | 0.0MB
   server: bobbykotick.rip
   port: 443
   type: vmess
@@ -26,12 +26,12 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: false
-  servername: RELAY-172.67.180.138-00 | 0.0MB
+  servername: RELAY-104.21.59.157-00 | 0.0MB
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: Amsterdam.bobbykotick.rip
+      Host: Dusseldorf.bobbykotick.rip
 - name: RELAY-172.67.180.138-01 | 0.0MB
   server: bobbykotick.rip
   port: 443
@@ -46,7 +46,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: Kansas.bobbykotick.rip
+      Host: Lille.bobbykotick.rip
 - name: RELAY-104.21.59.157-02 | 0.0MB
   server: bobbykotick.rip
   port: 443
@@ -61,7 +61,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: Dusseldorf.bobbykotick.rip
+      Host: Amsterdam.bobbykotick.rip
 - name: RELAY-104.21.59.157-03 | 0.0MB
   server: bobbykotick.rip
   port: 443
@@ -76,7 +76,7 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: Lille.bobbykotick.rip
+      Host: Kansas.bobbykotick.rip
 proxy-groups:
 - name: Global ©️
   type: select
@@ -133,7 +133,7 @@ proxy-groups:
   interval: 300
   tolerance: 100
   proxies:
-  - RELAY-172.67.180.138-00 | 0.0MB
+  - RELAY-104.21.59.157-00 | 0.0MB
 - name: Tier 2 ⚡️
   type: url-test
   url: http://clients3.google.com/generate_204
