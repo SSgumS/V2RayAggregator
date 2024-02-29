@@ -48,7 +48,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
 
     ##########   Add Name to Logs Before making chaages to Proxies  ############
     temp_providers = all_provider.split("\n")
-    log_reader = open(log_file, "r")
+    log_reader = open(log_file, "r", encoding="utf-8")
     log_lines = log_reader.readlines()
     log_reader.close()
     indexx = 0
@@ -68,7 +68,7 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
             except:
                 print("log lines length != providers length")
 
-    log_writer = open(log_file, "w")
+    log_writer = open(log_file, "w", encoding="utf-8")
     log_writer.writelines(log_lines)
     log_writer.close()
     ############################################################################
@@ -116,7 +116,6 @@ def eternity_convert(file, config, output, provider_file_enabled=True):
 
     # convert the safe partition to yaml format
     all_provider = "proxies:\n" + "\n".join(filtered_proxies)
-    all_provider = subs_function.fix_yaml_password_formatting(all_provider)
 
     lines = re.split(r"\n+", all_provider)
 

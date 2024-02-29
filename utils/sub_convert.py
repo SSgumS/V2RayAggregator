@@ -13,12 +13,13 @@ import geoip2.database
 
 
 class sub_convert:
-    password_pattern = re.compile(r'(password:\s*)([^\'"][^,}\r\n]*)')
+    password_pattern = re.compile(r'(password:\s*)([^\'"][^\r\n]*)')
 
     @staticmethod
     def replace_passwords(match: re.Match):
         return match.group(1) + "'" + match.group(2).replace("'", r"\'") + "'"
 
+    @staticmethod
     # {'input_type': ['url', 'content'],'output_type': ['url', 'YAML', 'Base64']}
     def main(
         raw_input,
@@ -82,6 +83,7 @@ class sub_convert:
         else:
             return "订阅内容解析错误"
 
+    @staticmethod
     # 对链接文本(Base64, url, YAML)进行格式化处理, 输出节点的配置字典（Clash 配置）, output 为真是输出 YAML 文本
     # 对链接文本(Base64, url, YAML)进行格式化处理, 输出节点的配置字典（Clash 配置）, output 为真是输出 YAML 文本
     def format(sub_content, output=False):
@@ -169,9 +171,7 @@ class sub_convert:
                             return sub_content
                         else:
                             content_yaml_dic = yaml.safe_load(sub_content)
-                            return (
-                                content_yaml_dic  # 返回字典, output 值为 True 时返回修饰过的 YAML 文本
-                            )
+                            return content_yaml_dic  # 返回字典, output 值为 True 时返回修饰过的 YAML 文本
                     except:
                         print("Sub_content 格式错误")
                         return "订阅内容解析错误"
@@ -179,6 +179,7 @@ class sub_convert:
             print("订阅内容解析错误")
             return "订阅内容解析错误"
 
+    @staticmethod
     # 输入节点配置字典, 对节点进行区域的筛选和重命名，输出 YAML 文本
     def makeup(input, dup_rm_enabled=False, format_name_enabled=False):
         # 区域判断(Clash YAML): https://blog.csdn.net/CSDN_duomaomao/article/details/89712826 (ip-api)
@@ -550,17 +551,17 @@ class sub_convert:
 
                 proxy_index = proxies_list.index(proxy)
                 if len(proxies_list) >= 999:
-                    proxy[
-                        "name"
-                    ] = f"{name_emoji}{country_code}-{ip}-{proxy_index:0>4d}"
+                    proxy["name"] = (
+                        f"{name_emoji}{country_code}-{ip}-{proxy_index:0>4d}"
+                    )
                 elif len(proxies_list) <= 999 and len(proxies_list) > 99:
-                    proxy[
-                        "name"
-                    ] = f"{name_emoji}{country_code}-{ip}-{proxy_index:0>3d}"
+                    proxy["name"] = (
+                        f"{name_emoji}{country_code}-{ip}-{proxy_index:0>3d}"
+                    )
                 elif len(proxies_list) <= 99:
-                    proxy[
-                        "name"
-                    ] = f"{name_emoji}{country_code}-{ip}-{proxy_index:0>2d}"
+                    proxy["name"] = (
+                        f"{name_emoji}{country_code}-{ip}-{proxy_index:0>2d}"
+                    )
 
             if proxy["server"] != "127.0.0.1":
                 # yaml.dump 显示中文方法 https://blog.csdn.net/weixin_41548578/article/details/90651464
@@ -579,6 +580,7 @@ class sub_convert:
 
         return yaml_str  # 输出 YAML 格式文本
 
+    @staticmethod
     # 将 URL 内容转换为 YAML 文本, output 为 False 时输出节点配置字典
     # to yaml
     def yaml_encode(url_content, output=True):
@@ -836,12 +838,14 @@ class sub_convert:
         except Exception as err:
             print(f"yaml encode error: {err}")
 
+    @staticmethod
     def base64_encode(url_content):  # 将 URL 内容转换为 Base64
         if url_content == None:
             url_content = ""
         base64_content = base64.b64encode(url_content.encode("utf-8")).decode("ascii")
         return base64_content
 
+    @staticmethod
     # to url
     def yaml_decode(url_content):  # YAML 文本转换为 URL 链接内容
         try:
@@ -1058,6 +1062,7 @@ class sub_convert:
             print(f"yaml decode 发生 {err} 错误")
             return "订阅内容解析错误"
 
+    @staticmethod
     def base64_decode(url_content):  # Base64 转换为 URL 链接内容
         if "-" in url_content:
             url_content = url_content.replace("-", "+")
@@ -1079,6 +1084,7 @@ class sub_convert:
             base64_content_format = base64_content
             return str(base64_content)
 
+    @staticmethod
     # {url='订阅链接', output_type={'clash': 输出 Clash 配置, 'base64': 输出 Base64 配置, 'url': 输出 url 配置}, host='远程订阅转化服务地址'}
     def convert_remote(url="", output_type="clash", host="http://127.0.0.1:25500"):
         # 使用远程订阅转换服务，输出相应配置。

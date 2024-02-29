@@ -15,7 +15,7 @@ class NoAliasDumper(yaml.SafeDumper):
 
 
 class subs_function:
-    password_pattern = re.compile(r'(password:\s*)([^\'"][^,}\r\n]*)')
+    password_pattern = re.compile(r'(password:\s*)([^\'"][^\r\n]*)')
 
     @staticmethod
     def replace_passwords(match: re.Match):
@@ -38,12 +38,6 @@ class subs_function:
         return yaml_str
 
     @staticmethod
-    def fix_yaml_password_formatting(yaml_str):
-        yaml_str = re.sub(
-            subs_function.password_pattern, subs_function.replace_passwords, yaml_str
-        )
-        return yaml_str
-
     def convert_sub(
         url: str,
         output: str,
@@ -65,6 +59,7 @@ class subs_function:
             print(e)
             return "Err: failed to parse sub"
 
+    @staticmethod
     def is_line_valid(line, support_vless=False):
         if (
             line.startswith("ssr://")
@@ -79,6 +74,7 @@ class subs_function:
 
         return ""
 
+    @staticmethod
     def fix_proxies_name(corresponding_proxies: []):
         emoji = {
             "AD": "🇦🇩",
@@ -400,6 +396,7 @@ class subs_function:
 
         return list(filter(lambda c: c not in excluded_proxies, corresponding_proxies))
 
+    @staticmethod
     def fix_proxies_duplication(corresponding_proxies: []):
         print("\nBefore was " + str(corresponding_proxies.__len__()) + "\n")
         begin = 0
