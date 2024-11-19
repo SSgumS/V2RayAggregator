@@ -529,7 +529,7 @@ high-speed node quantity: `200`
 -   you can import these 200 tested nodes using their subscription link into different clients. refer to `Instructions & Usage` section
 
 ### all nodes
-merge nodes w/o dup: `5671`
+merge nodes w/o dup: `5682`
 merge nodes w/o dup: `7004`
 
 -   [Node link Mixed (V2ray)](https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/sub/sub_merge.txt)
@@ -567,16 +567,16 @@ merge nodes w/o dup: `7004`
 - [Jsnzkpg/Jsnzkpg](https://github.com/Jsnzkpg/Jsnzkpg), number of nodes: `6`
 - [ermaozi/get_subscribe](https://github.com/ermaozi/get_subscribe), number of nodes: `18`
 - [wrfree/free](https://github.com/wrfree/free), number of nodes: `51`
-- [anaer/Sub](https://github.com/anaer/Sub), number of nodes: `392`
-- [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `52`
-- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `68`
+- [anaer/Sub](https://github.com/anaer/Sub), number of nodes: `438`
+- [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `42`
+- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `7`
 - [misersun/config003-002](https://github.com/misersun/config003), number of nodes: `217`
 - [clash.221207.xyz/pubclashyaml](https://clash.221207.xyz/pubclashyaml), number of nodes: `203`
-- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `227`
+- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `306`
 - [freefq/free](https://github.com/freefq/free), number of nodes: `14`
 - [xiyaowong/freeFQ](https://github.com/xiyaowong/freeFQ), number of nodes: `156`
 - [YasserDivaR/pr0xy](https://github.com/YasserDivaR/pr0xy), number of nodes: `621`
-- [peasoft/NoMoreWalls](https://github.com/peasoft/NoMoreWalls), number of nodes: `49`
+- [peasoft/NoMoreWalls](https://github.com/peasoft/NoMoreWalls), number of nodes: `52`
 - [mahdibland/get_v2](https://github.com/mahdibland/get_v2), number of nodes: `2441`
 - [jikelonglie/meskell](https://github.com/jikelonglie/meskell), number of nodes: `9`
 - [freebaipiao/freebaipiao](https://github.com/freebaipiao/freebaipiao), number of nodes: `6`
@@ -591,7 +591,7 @@ merge nodes w/o dup: `7004`
 - [SnapdragonLee/SystemProxy](https://github.com/SnapdragonLee/SystemProxy), number of nodes: `239`
 - [sub.pmsub.me/base64](https://sub.pmsub.me/base64), number of nodes: `2`
 - [hermanb001/ProxyTest](https://github.com/hermanb001/ProxyTest), number of nodes: `1743`
-- [mahdibland/vpn.fail](https://github.com/mahdibland/get_v2), number of nodes: `996`
+- [mahdibland/vpn.fail](https://github.com/mahdibland/get_v2), number of nodes: `997`
 - [LonUp/NodeList](https://github.com/LonUp/NodeList), number of nodes: `1451`
 
 -   [pojiezhiyuanjun/freev2](https://github.com/pojiezhiyuanjun/freev2), number of nodes: `162`
