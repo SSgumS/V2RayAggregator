@@ -529,7 +529,7 @@ high-speed node quantity: `200`
 -   you can import these 200 tested nodes using their subscription link into different clients. refer to `Instructions & Usage` section
 
 ### all nodes
-merge nodes w/o dup: `6022`
+merge nodes w/o dup: `6095`
 merge nodes w/o dup: `7004`
 
 -   [Node link Mixed (V2ray)](https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/sub/sub_merge.txt)
@@ -555,7 +555,7 @@ merge nodes w/o dup: `7004`
 -   [Clash For Others](https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/provider-others.yml)
 
 ### node sources
-- [pojiezhiyuanjun/freev2](https://github.com/pojiezhiyuanjun/freev2), number of nodes: `141`
+- [pojiezhiyuanjun/freev2](https://github.com/pojiezhiyuanjun/freev2), number of nodes: `147`
 - [Nodefree.org](https://github.com/Fukki-Z/nodefree), number of nodes: `28`
 - [FiFier/v2rayShare](https://github.com/FiFier/v2rayShare), number of nodes: `18`
 - [colatiger/v2ray-nodes](https://github.com/colatiger/v2ray-nodes), number of nodes: `121`
@@ -565,14 +565,14 @@ merge nodes w/o dup: `7004`
 - [DoveBoy/Vmess-Actions](https://github.com/ldir92664/Vmess-Actions), number of nodes: `105`
 - [gooooooooooooogle/Clash-Config](https://github.com/gooooooooooooogle/Clash-Config), number of nodes: `1`
 - [Jsnzkpg/Jsnzkpg](https://github.com/Jsnzkpg/Jsnzkpg), number of nodes: `10`
-- [ermaozi/get_subscribe](https://github.com/ermaozi/get_subscribe), number of nodes: `24`
+- [ermaozi/get_subscribe](https://github.com/ermaozi/get_subscribe), number of nodes: `28`
 - [wrfree/free](https://github.com/wrfree/free), number of nodes: `51`
 - [anaer/Sub](https://github.com/anaer/Sub), number of nodes: `120`
-- [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `56`
-- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `17`
+- [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `55`
+- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `21`
 - [misersun/config003-002](https://github.com/misersun/config003), number of nodes: `217`
 - [clash.221207.xyz/pubclashyaml](https://clash.221207.xyz/pubclashyaml), number of nodes: `201`
-- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `238`
+- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `300`
 - [freefq/free](https://github.com/freefq/free), number of nodes: `14`
 - [xiyaowong/freeFQ](https://github.com/xiyaowong/freeFQ), number of nodes: `156`
 - [yaney01/Yaney01](https://github.com/yaney01/Yaney01), number of nodes: `27`
