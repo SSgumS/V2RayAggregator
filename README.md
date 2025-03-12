@@ -529,7 +529,7 @@ high-speed node quantity: `200`
 -   you can import these 200 tested nodes using their subscription link into different clients. refer to `Instructions & Usage` section
 
 ### all nodes
-merge nodes w/o dup: `5724`
+merge nodes w/o dup: `5710`
 merge nodes w/o dup: `7004`
 
 -   [Node link Mixed (V2ray)](https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/sub/sub_merge.txt)
@@ -568,8 +568,8 @@ merge nodes w/o dup: `7004`
 - [ermaozi/get_subscribe](https://github.com/ermaozi/get_subscribe), number of nodes: `21`
 - [wrfree/free](https://github.com/wrfree/free), number of nodes: `51`
 - [anaer/Sub](https://github.com/anaer/Sub), number of nodes: `199`
-- [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `107`
-- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `22`
+- [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `113`
+- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `24`
 - [misersun/config003-002](https://github.com/misersun/config003), number of nodes: `217`
 - [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `508`
 - [freefq/free](https://github.com/freefq/free), number of nodes: `14`
@@ -587,7 +587,7 @@ merge nodes w/o dup: `7004`
 - [Lewis-1217/FreeNodes](https://github.com/Lewis-1217/FreeNodes), number of nodes: `39`
 - [jiang.netlify.app](https://jiang.netlify.app), number of nodes: `2`
 - [learnhard-cn/free_proxy_ss](https://github.com/learnhard-cn/free_proxy_ss), number of nodes: `116`
-- [SnapdragonLee/SystemProxy](https://github.com/SnapdragonLee/SystemProxy), number of nodes: `889`
+- [SnapdragonLee/SystemProxy](https://github.com/SnapdragonLee/SystemProxy), number of nodes: `851`
 - [hermanb001/ProxyTest](https://github.com/hermanb001/ProxyTest), number of nodes: `1743`
 - [mahdibland/vpn.fail](https://github.com/mahdibland/get_v2), number of nodes: `999`
 - [LonUp/NodeList](https://github.com/LonUp/NodeList), number of nodes: `1451`
