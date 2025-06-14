@@ -529,7 +529,7 @@ high-speed node quantity: `200`
 -   you can import these 200 tested nodes using their subscription link into different clients. refer to `Instructions & Usage` section
 
 ### all nodes
-merge nodes w/o dup: `1189`
+merge nodes w/o dup: `12`
 merge nodes w/o dup: `7004`
 
 -   [Node link Mixed (V2ray)](https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/sub/sub_merge.txt)
@@ -567,7 +567,7 @@ merge nodes w/o dup: `7004`
 - [wrfree/free](https://github.com/wrfree/free), number of nodes: `51`
 - [anaer/Sub](https://github.com/anaer/Sub), number of nodes: `40`
 - [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `103`
-- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `21`
+- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `13`
 - [misersun/config003-002](https://github.com/misersun/config003), number of nodes: `217`
 - [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `406`
 - [freefq/free](https://github.com/freefq/free), number of nodes: `14`
