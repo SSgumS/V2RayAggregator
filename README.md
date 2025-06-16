@@ -392,9 +392,9 @@ merge nodes w/o dup: `7004`
 - [wrfree/free](https://github.com/wrfree/free), number of nodes: `51`
 - [anaer/Sub](https://github.com/anaer/Sub), number of nodes: `42`
 - [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `46`
-- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `14`
+- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `12`
 - [misersun/config003-002](https://github.com/misersun/config003), number of nodes: `217`
-- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `279`
+- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `248`
 - [freefq/free](https://github.com/freefq/free), number of nodes: `14`
 - [xiyaowong/freeFQ](https://github.com/xiyaowong/freeFQ), number of nodes: `156`
 - [YasserDivaR/pr0xy](https://github.com/YasserDivaR/pr0xy), number of nodes: `621`
@@ -411,9 +411,9 @@ merge nodes w/o dup: `7004`
 - [learnhard-cn/free_proxy_ss](https://github.com/learnhard-cn/free_proxy_ss), number of nodes: `116`
 - [SnapdragonLee/SystemProxy](https://github.com/SnapdragonLee/SystemProxy), number of nodes: `518`
 - [hermanb001/ProxyTest](https://github.com/hermanb001/ProxyTest), number of nodes: `1743`
-- [mahdibland/vpn.fail](https://github.com/mahdibland/get_v2), number of nodes: `995`
+- [mahdibland/vpn.fail](https://github.com/mahdibland/get_v2), number of nodes: `997`
 - [LonUp/NodeList](https://github.com/LonUp/NodeList), number of nodes: `1451`
-- [soroushmirzaei/telegram-configs-collector](https://github.com/soroushmirzaei/telegram-configs-collector), number of nodes: `2900`
+- [soroushmirzaei/telegram-configs-collector](https://github.com/soroushmirzaei/telegram-configs-collector), number of nodes: `2912`
 
 -   [pojiezhiyuanjun/freev2](https://github.com/pojiezhiyuanjun/freev2), number of nodes: `162`
 -   [Nodefree.org](https://github.com/Fukki-Z/nodefree), number of nodes: `39`
