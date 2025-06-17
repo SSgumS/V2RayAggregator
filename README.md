@@ -354,7 +354,7 @@ high-speed node quantity: `200`
 -   you can import these 200 tested nodes using their subscription link into different clients. refer to `Instructions & Usage` section
 
 ### all nodes
-merge nodes w/o dup: `25`
+merge nodes w/o dup: `7716`
 merge nodes w/o dup: `7004`
 
 -   [Node link Mixed (V2ray)](https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/sub/sub_merge.txt)
@@ -392,9 +392,9 @@ merge nodes w/o dup: `7004`
 - [wrfree/free](https://github.com/wrfree/free), number of nodes: `51`
 - [anaer/Sub](https://github.com/anaer/Sub), number of nodes: `43`
 - [aiboboxx/v2rayfree](https://github.com/aiboboxx/v2rayfree), number of nodes: `85`
-- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `26`
+- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `14`
 - [misersun/config003-002](https://github.com/misersun/config003), number of nodes: `217`
-- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `387`
+- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `386`
 - [freefq/free](https://github.com/freefq/free), number of nodes: `14`
 - [xiyaowong/freeFQ](https://github.com/xiyaowong/freeFQ), number of nodes: `156`
 - [YasserDivaR/pr0xy](https://github.com/YasserDivaR/pr0xy), number of nodes: `621`
@@ -407,13 +407,13 @@ merge nodes w/o dup: `7004`
 - [adminaliang/v2ray](https://github.com/adminaliang/v2ray), number of nodes: `16`
 - [Jia-Pingwa/free-v2ray-merge](https://github.com/Jia-Pingwa/free-v2ray-merge), number of nodes: `327`
 - [Lewis-1217/FreeNodes](https://github.com/Lewis-1217/FreeNodes), number of nodes: `39`
-- [jiang.netlify.app](https://jiang.netlify.app), number of nodes: `116`
+- [jiang.netlify.app](https://jiang.netlify.app), number of nodes: `163`
 - [learnhard-cn/free_proxy_ss](https://github.com/learnhard-cn/free_proxy_ss), number of nodes: `116`
 - [SnapdragonLee/SystemProxy](https://github.com/SnapdragonLee/SystemProxy), number of nodes: `490`
 - [hermanb001/ProxyTest](https://github.com/hermanb001/ProxyTest), number of nodes: `1743`
 - [mahdibland/vpn.fail](https://github.com/mahdibland/get_v2), number of nodes: `999`
 - [LonUp/NodeList](https://github.com/LonUp/NodeList), number of nodes: `1451`
-- [soroushmirzaei/telegram-configs-collector](https://github.com/soroushmirzaei/telegram-configs-collector), number of nodes: `2944`
+- [soroushmirzaei/telegram-configs-collector](https://github.com/soroushmirzaei/telegram-configs-collector), number of nodes: `3004`
 
 -   [pojiezhiyuanjun/freev2](https://github.com/pojiezhiyuanjun/freev2), number of nodes: `162`
 -   [Nodefree.org](https://github.com/Fukki-Z/nodefree), number of nodes: `39`
