@@ -529,7 +529,7 @@ high-speed node quantity: `200`
 -   you can import these 200 tested nodes using their subscription link into different clients. refer to `Instructions & Usage` section
 
 ### all nodes
-merge nodes w/o dup: `5151`
+merge nodes w/o dup: `5148`
 merge nodes w/o dup: `7004`
 
 -   [Node link Mixed (V2ray)](https://raw.githubusercontent.com/SSgumS/V2RayAggregator/master/sub/sub_merge.txt)
@@ -555,7 +555,7 @@ merge nodes w/o dup: `7004`
 -   [Clash For Others](https://cdn.jsdelivr.net/gh/mahdibland/V2RayAggregator@master/update/provider/provider-others.yml)
 
 ### node sources
-- [pojiezhiyuanjun/freev2](https://github.com/pojiezhiyuanjun/freev2), number of nodes: `130`
+- [pojiezhiyuanjun/freev2](https://github.com/pojiezhiyuanjun/freev2), number of nodes: `144`
 - [colatiger/v2ray-nodes](https://github.com/colatiger/v2ray-nodes), number of nodes: `121`
 - [SSgumS/V2RayAggregator](https://github.com/SSgumS/V2RayAggregator), number of nodes: `200`
 - [iwxf/free-v2ray](https://github.com/iwxf/free-v2ray), number of nodes: `39`
@@ -563,13 +563,13 @@ merge nodes w/o dup: `7004`
 - [gooooooooooooogle/Clash-Config](https://github.com/gooooooooooooogle/Clash-Config), number of nodes: `1`
 - [ermaozi/get_subscribe](https://github.com/ermaozi/get_subscribe), number of nodes: `3`
 - [wrfree/free](https://github.com/wrfree/free), number of nodes: `51`
-- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `3`
+- [Pawdroid/Free-servers](https://github.com/Pawdroid/Free-servers), number of nodes: `7`
 - [misersun/config003-002](https://github.com/misersun/config003), number of nodes: `217`
-- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `271`
+- [mfuu/v2ray](https://github.com/mfuu/v2ray), number of nodes: `306`
 - [freefq/free](https://github.com/freefq/free), number of nodes: `14`
 - [xiyaowong/freeFQ](https://github.com/xiyaowong/freeFQ), number of nodes: `156`
 - [YasserDivaR/pr0xy](https://github.com/YasserDivaR/pr0xy), number of nodes: `621`
-- [peasoft/NoMoreWalls](https://github.com/peasoft/NoMoreWalls), number of nodes: `35`
+- [peasoft/NoMoreWalls](https://github.com/peasoft/NoMoreWalls), number of nodes: `34`
 - [mahdibland/get_v2](https://github.com/mahdibland/get_v2), number of nodes: `2420`
 - [jikelonglie/meskell](https://github.com/jikelonglie/meskell), number of nodes: `9`
 - [freebaipiao/freebaipiao](https://github.com/freebaipiao/freebaipiao), number of nodes: `6`
